@@ -4,6 +4,40 @@
     box-sizing: border-box;
 }
 
+.festive-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: black;
+}
+
+.festive-button {
+    background-color: #cc0000;
+    /* Tomato Red */
+    color: #ffffff;
+    /* White text */
+    padding: 15px 20px;
+    font-size: 2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: .8s;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 img {
     width: 100%;
@@ -19,5 +53,17 @@ img {
 @media screen and (min-width: 1025px) {
     .mobile {
         display: none;
+    }
+}
+
+@keyframes blink {
+    from {
+        background-color: #cc0000;
+        color: #ffffff;
+    }
+
+    to {
+        background-color: #ffb3a6;
+        color: #000000;
     }
 }

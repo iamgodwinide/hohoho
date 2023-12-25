@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="festive-wrap" id="festive">
+      <button class="festive-button" id="open">Yule Entrance</button>
+    </div>
+
+    <audio src="/bg.mp3" id="audio"></audio>
+
     <img src="/$HOHOHO.png" alt="" class="desktop" usemap="#image-map" />
     <img src="/SITEMOBILE (1).png" alt="" class="mobile" usemap="#image-map2" />
 
@@ -65,6 +71,17 @@
     <script>
       $(document).ready(function (e) {
         $("img[usemap]").rwdImageMaps();
+      });
+    </script>
+
+    <script>
+      const openBtn = document.querySelector("#open");
+      const festive = document.querySelector("#festive");
+      const audio = document.querySelector("#audio");
+
+      openBtn.addEventListener("click", () => {
+        audio.play();
+        festive.style.display = "none";
       });
     </script>
   </body>
